@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVerse Registration</title>
+    <link rel="stylesheet" href="style-reg.css">
+    <link rel="icon" href="mt-logo.jpg">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #111111;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 246, 255, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00f6ff;
+            font-size: 1.1rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: #ff007f;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background: #ff007f;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .submit-btn:hover {
+            background: #d10065;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+        }
+        
+        .required::after {
+            content: " *";
+            color: #ff007f;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <a href="index.html">
+                <img src="mt-logo-nb.png" alt="logo">
+                <p>TechVerse</p>
+            </a>
+        </div>
+        <div id="links">
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="registration.html" id="op">Registration</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="main-content">
+            <h1 class="glitch" data-text="Register Now">Register Now</h1>
+            <p class="subheading">Join India's Premier Tech Fest</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form id="registrationForm">
+            <!-- Personal Details -->
+            <h2 class="category-header">👤 Personal Information</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required">Full Name</label>
+                    <input type="text" class="form-input" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label required">Date of Birth</label>
+                    <input type="date" class="form-input" name="dob" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required">Email</label>
+                    <input type="email" class="form-input" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label required">Phone Number</label>
+                    <input type="tel" class="form-input" name="phone" required>
+                </div>
+            </div>
+            
+            <!-- School Details -->
+            <h2 class="category-header">🏫 School Information</h2>
+            <div class="form-group">
+                <label class="form-label required">School Name</label>
+                <input type="text" class="form-input" name="schoolName" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required">School Address</label>
+                    <input type="text" class="form-input" name="schoolAddress" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label required">City</label>
+                    <input type="text" class="form-input" name="city" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required">Teacher In-Charge Name</label>
+                    <input type="text" class="form-input" name="teacherName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label required">Teacher's Contact</label>
+                    <input type="tel" class="form-input" name="teacherContact" required>
+                </div>
+            </div>
+            
+            <!-- Event Selection -->
+            <h2 class="category-header">🎯 Event Registration</h2>
+            <div class="form-group">
+                <label class="form-label required">Select Events</label>
+<select class="form-input" name="events" multiple required style="height: 120px;">
+  <optgroup label="🔧 Tech & Development">
+    <option value="CodeStorm">CodeStorm</option>
+    <option value="AppVenture">AppVenture</option>
+    <option value="WebWars">Web Wars</option>
+    <option value="AIArena">AI Arena</option>
+    <option value="HackVerse">HackVerse</option>
+  </optgroup>
+
+  <optgroup label="🎮 Gaming & Digital">
+    <option value="GamingArena">Gaming Arena</option>
+    <option value="TypingTitans">Typing Titans</option>
+    <option value="ARVRZone">AR/VR Experience Zone</option>
+  </optgroup>
+
+  <optgroup label="📷 Creativity & Media">
+    <option value="ShutterShot">ShutterShot</option>
+    <option value="DesignSprint">DesignSprint</option>
+    <option value="CineVerse">CineVerse</option>
+    <option value="MemeMania">Meme Mania</option>
+  </optgroup>
+
+  <optgroup label="💼 Business & Marketing">
+    <option value="BizPitch">BizPitch</option>
+    <option value="MarketMasters">MarketMasters</option>
+    <option value="MockIPO">Mock IPO</option>
+  </optgroup>
+
+  <optgroup label="💡 Open / General">
+    <option value="QuizTech">QuizTech</option>
+    <option value="ScavengerHunt">Scavenger Hunt</option>
+    <option value="TreasureCode">Treasure Code</option>
+    <option value="DebateJAM">Debate & JAM</option>
+  </optgroup>
+</select>
+<small style="color: #888;">Hold Ctrl (Cmd on Mac) to select multiple events</small>
+
+            </div>
+            
+            <!-- Additional Info -->
+            <h2 class="category-header">ℹ️ Additional Information</h2>
+            <div class="form-group">
+                <label class="form-label">Special Requirements</label>
+                <textarea class="form-input" name="specialRequirements" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">How did you hear about TechVerse?</label>
+                <select class="form-input" name="referralSource">
+                    <option value="">Select an option</option>
+                    <option value="School">School</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <!-- Terms and Submit -->
+            <div class="form-group" style="margin-top: 40px;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="color: #ccc;">I agree to the <a href="#" style="color: #00f6ff;">Terms and Conditions</a> and <a href="#" style="color: #00f6ff;">Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Complete Registration</button>
+        </form>
+    </div>
+
+<div id="footer">
+        <h1>Contact Us</h1>
+        <div id="g">
+        <div id="contact" class="grid">
+            <a href="#">Adress: MCS DWARKA SECTOR 22, NEW DELHI</a><br><br>
+            <a href="mail:madhavtyagi3008@mountcareldelhi.com">E-mail</a><br><br>
+            <a href="tel:9999999991">Mobile +91 9999999991</a><br>
+
+
+
+        </div>
+
+        <div id="follow-us" class="grid">
+            <a href="instagram.com"><img src="insta.png" class="conta" alt="">Instagram</a><br><br>
+            <a href="discord.gg/me"><img src="disc.png" class="conta" alt="">Discord</a><br><br>
+            <a href="github.io"><img src="git.png" class="conta" alt="">Github</a><br>
+        </div>
+    </div>
+        <div id="legal">
+                <h2>© 2025 TechVerse. All rights reserved. <br>
+                    Designed with 💜 by MADHAV TYAGI</h2>
+
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Convert to Excel (using SheetJS library)
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.json_to_sheet([data]);
+            XLSX.utils.book_append_sheet(wb, ws, "Registrations");
+            
+            // Save to file
+            XLSX.writeFile(wb, 'TechVerse_Registration.xlsx');
+            
+            // Show confirmation
+            alert('Registration successful! Data saved to Excel file.');
+            this.reset();
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>

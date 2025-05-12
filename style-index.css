@@ -1,0 +1,370 @@
+body{
+    background-color: #1f1f1f;
+    margin: 0%;
+    color: white;
+}
+
+#nav{
+    z-index: 3;
+    height: 100px;
+    position:sticky;
+    top:0%;
+    background-color: #111111;
+    
+}
+
+
+#logo>a>img{
+    display: inline;
+    height: 100px;
+    width: 100px;
+}
+
+#logo>a{
+    text-decoration: none;
+    padding-top:30px;
+}
+#logo>a>p{
+    display: inline;
+    font-size: 70px;
+    position:relative;
+    bottom: 30px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+
+}
+
+#logo , #links{
+    display: inline;
+}
+#links>a{
+    color:white;
+    font-size: 20px ;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: inline;
+    padding: 15px;
+    position: relative;
+    top: 35px;
+    transition: 0.5s;
+}
+#links>a:hover{
+    color: dimgray;
+}
+
+#links{
+    float: right;
+}
+
+#main{
+    padding-bottom:0px ;
+    margin-bottom: 0%;
+    margin-top:0%;
+    padding-top: 0%;
+}
+
+#main>h1{
+    margin: 0%;
+    padding-top: auto;
+    text-align: center;
+    font-size: 150px;
+    
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    color: #fff;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 100px;
+    animation: flicker 2s infinite linear;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow:
+        -2px 0 #ff0055,
+        -4px 2px #ff0055;
+    animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+
+.glitch::after {
+    left: -2px;
+    text-shadow:
+        2px 0 #00f6ff,
+        4px -1px #8800ff;
+    animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    45% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+    55% { opacity: 0.8; }
+}
+
+
+@keyframes glitchTop {
+    0% { clip: rect(0, 9999px, 0, 0); }
+    5% { clip: rect(10px, 9999px, 30px, 0); }
+    10% { clip: rect(40px, 9999px, 60px, 0); }
+    15% { clip: rect(70px, 9999px, 90px, 0); }
+    100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+
+@keyframes glitchBottom {
+    0% { clip: rect(0, 9999px, 0, 0); }
+    5% { clip: rect(90px, 9999px, 120px, 0); }
+    10% { clip: rect(50px, 9999px, 70px, 0); }
+    15% { clip: rect(20px, 9999px, 40px, 0); }
+    100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+.r-img{
+    float: right;
+    border-radius: 150px;
+    height: 300px;
+}
+
+#abt{
+    padding-top: 0%;
+    margin-top: 0%;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    height: 450px;
+    background-color: ;
+}
+#abt>h2{font-size: 70px;text-align:center;font-weight: 800;}
+#abt>p{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#main {
+    background-image: url(earth.gif);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    background-color: #000000;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ff007f;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d10065;
+    transform: scale(1.05);
+}
+
+.l-img{
+    float: left;
+    height: 300px;
+    border-radius: 150px;
+}
+
+#evt>h2{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 800;
+}
+#evt>h3{
+    font-size: 25px;
+    font-weight: 200;
+}
+#evt>p{
+    font-size:20px ;
+    font-weight: 150;
+    text-align: center;
+}
+
+#evt{
+    padding: 20px;
+    background-color: #111111;
+    padding-top: 0%;
+}
+
+
+
+#why>h2{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 800;
+}
+#why>h3{
+    font-size: 30px;
+    font-weight: 200;
+    
+}
+#why>p{
+    font-size:20px ;
+    font-weight: 150;
+}
+#why{
+    padding: 20px;
+    padding-top: 0%;
+}
+
+
+#sponsors {
+    background-color: #111111;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  #sponsors h2 {
+    font-size: 48px;
+    color: #ff007f;
+    margin-bottom: 40px;
+  }
+  
+  .slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .slide {
+    height: 200px;
+    width: 250px;
+    margin: 0 20px;
+    object-fit: contain;
+    filter: brightness(0.8) drop-shadow(0 0 10px #ff007f88);
+    transition: transform 0.3s;
+  }
+  
+  .slide:hover {
+    transform: scale(1.1);
+    filter: brightness(1) drop-shadow(0 0 12px #ff007f);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+.conta{
+    height: 30px;
+    border-radius: 15px;
+  }
+
+#g{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap:30px;
+    padding: 20px;
+
+  }
+.grid>a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    align-items: center;
+}
+#legal>h2{
+
+    font-size: large;
+    text-align: center;
+}
+#footer>h1{
+
+    font-size: 50px;
+    text-align: center;
+}
+
+#footer{
+    
+    padding: 0%;
+    margin: 0%;
+}
+ @media only screen and (max-width:1200px) {
+    #links>a{
+        font-size: 15px;
+        top: 25px;
+    }
+    #logo>a>p{
+        font-size: 50px;
+        top: 15x;
+    }
+    #logo>a{
+        top: 5px;
+    }
+    #logo>a>img{
+        width: 90px;
+        height: 70px;
+    }
+    #nav{
+        height: 70px;
+    }
+    #abt{
+        height: 570px;
+    }
+ }
+
+ #main {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(earth.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:auto;
+ 
+}
